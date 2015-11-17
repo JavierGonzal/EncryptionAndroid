@@ -23,14 +23,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/activity_aes_edit_text"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:text="@string/symmetric_algorithm_aes_encryption_button" />
+
     <TextView
         android:id="@+id/activity_aes_text_view_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/activity_aes_button"
+        android:paddingTop="@dimen/activity_vertical_margin"
         android:text="@string/symmetric_algorithm_aes_title"
-        android:textColor="@color/colorPrimary"
-        android:layout_below="@+id/activity_aes_button"/>
+        android:textColor="@color/colorPrimary" />
 
     <TextView
         android:id="@+id/activity_aes_text_view"
@@ -38,13 +41,15 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/activity_aes_text_view_title"
         android:layout_centerHorizontal="true" />
+
     <TextView
         android:id="@+id/activity_aes_encode_text_view_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/activity_aes_text_view"
+        android:paddingTop="@dimen/activity_vertical_margin"
         android:text="@string/symmetric_algorithm_aes_encryption_title"
-        android:textColor="@color/colorPrimary"
-        android:layout_below="@+id/activity_aes_text_view"/>
+        android:textColor="@color/colorPrimary" />
 
     <TextView
         android:id="@+id/activity_aes_encode_text_view"
@@ -57,9 +62,10 @@
         android:id="@+id/activity_aes_decode_text_view_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/activity_aes_encode_text_view"
+        android:paddingTop="@dimen/activity_vertical_margin"
         android:text="@string/symmetric_algorithm_aes_decryption_title"
-        android:textColor="@color/colorPrimary"
-        android:layout_below="@+id/activity_aes_encode_text_view"/>
+        android:textColor="@color/colorPrimary" />
 
     <TextView
         android:id="@+id/activity_aes_decode_text_view"

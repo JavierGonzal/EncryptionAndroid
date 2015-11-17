@@ -21,8 +21,6 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private List<String> mList;
-    private ListAdapter mAdapter;
-
     private ListView mListView;
 
     @Override
@@ -51,8 +49,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void refrestList() {
         mList = SupportedAlgorithms.listSupportedAlgorithms();
-        mAdapter = new ListAdapter(this, mList);
-        mListView.setAdapter(mAdapter);
+        ListAdapter adapter = new ListAdapter(this, mList);
+        mListView.setAdapter(adapter);
     }
 
     @Override

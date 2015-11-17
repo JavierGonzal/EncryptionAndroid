@@ -12,8 +12,16 @@
     tools:context="com.thedeveloperworldisyous.encryptionfile.MainActivity"
     tools:showIn="@layout/activity_main">
 
+    <TextView
+        android:id="@+id/activity_main_cryptographic_algorithms_title_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/activity_main_cryptographic_algorithms_title"
+        android:textColor="@color/colorPrimary" />
+
     <ListView
         android:id="@+id/content_main_list_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/activity_main_cryptographic_algorithms_title_text_view" />
 </RelativeLayout>

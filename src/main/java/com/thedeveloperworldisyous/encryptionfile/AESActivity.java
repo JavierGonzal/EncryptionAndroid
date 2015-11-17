@@ -1,26 +1,22 @@
 package com.thedeveloperworldisyous.encryptionfile;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Base64;
-import android.util.Log;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
 import com.thedeveloperworldisyous.encryptionfile.utils.SymmetricAlgorithmAES;
 
-import java.security.SecureRandom;
-
-import javax.crypto.Cipher;
-import javax.crypto.KeyGenerator;
 import javax.crypto.spec.SecretKeySpec;
 
 public class AESActivity extends AppCompatActivity implements View.OnClickListener{
 
-    public static final String sTAG = "AESActivity";
     public TextView mInPutTextView, mEncodedTextView, mDecoded;
     public EditText mEditText;
 
@@ -53,7 +49,9 @@ public class AESActivity extends AppCompatActivity implements View.OnClickListen
     }
 
     public void encodeAndDecode() {
+        hideKeyboard();
         String stringText = mEditText.getText().toString();
+        mEditText.setText("");
         mInPutTextView.setText(stringText);
         SecretKeySpec secretKeySpec = SymmetricAlgorithmAES.setUpSecrectKey();
 
@@ -77,6 +75,15 @@ public class AESActivity extends AppCompatActivity implements View.OnClickListen
     {
         finish();
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+    }
+
+    public void hideKeyboard() {
+        // Check if no view has focus:
+        View view = this.getCurrentFocus();
+        if (view != null) {
+            InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+        }
     }
 
 }
