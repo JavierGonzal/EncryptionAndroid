@@ -24,6 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/activity_rsa_edit_text"
         android:layout_centerHorizontal="true"
+        android:onClick="encodeAndDecodeRSA"
         android:text="@string/symmetric_algorithm_aes_encryption_button" />
 
     <TextView
@@ -32,7 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/activity_rsa_button"
         android:paddingTop="@dimen/activity_vertical_margin"
-        android:text="@string/symmetric_algorithm_aes_title"
+        android:text="@string/asymmetric_algorithm_rsa_title"
         android:textColor="@color/colorPrimary" />
 
     <TextView
@@ -48,7 +49,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/activity_rsa_text_view"
         android:paddingTop="@dimen/activity_vertical_margin"
-        android:text="@string/symmetric_algorithm_aes_encryption_title"
+        android:text="@string/asymmetric_algorithm_rsa_enryption_title"
         android:textColor="@color/colorPrimary" />
 
     <TextView
@@ -64,13 +65,12 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/activity_rsa_encode_text_view"
         android:paddingTop="@dimen/activity_vertical_margin"
-        android:text="@string/symmetric_algorithm_aes_decryption_title"
+        android:text="@string/asymmetric_algorithm_rsa_deryption_title"
         android:textColor="@color/colorPrimary" />
 
     <TextView
         android:id="@+id/activity_rsa_decode_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/activity_rsa_decode_text_view_title"
-        android:layout_centerHorizontal="true" />
+        android:layout_below="@+id/activity_rsa_decode_text_view_title"/>
 </RelativeLayout>

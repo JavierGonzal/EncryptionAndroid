@@ -7,4 +7,9 @@
         android:orderInCategory="100"
         android:title="@string/action_aes"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/action_rsa"
+        android:orderInCategory="100"
+        android:title="@string/action_rsa"
+        app:showAsAction="never" />
 </menu>

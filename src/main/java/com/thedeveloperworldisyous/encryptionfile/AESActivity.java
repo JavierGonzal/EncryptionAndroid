@@ -12,10 +12,11 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.thedeveloperworldisyous.encryptionfile.utils.SymmetricAlgorithmAES;
+import com.thedeveloperworldisyous.encryptionfile.utils.Utils;
 
 import javax.crypto.spec.SecretKeySpec;
 
-public class AESActivity extends AppCompatActivity implements View.OnClickListener{
+public class AESActivity extends AppCompatActivity {
 
     public TextView mInPutTextView, mEncodedTextView, mDecoded;
     public EditText mEditText;
@@ -29,27 +30,15 @@ public class AESActivity extends AppCompatActivity implements View.OnClickListen
 
         mEditText = (EditText) findViewById(R.id.activity_aes_edit_text);
         mInPutTextView = (TextView)findViewById(R.id.activity_aes_text_view);
-        Button button = (Button) findViewById(R.id.activity_aes_button);
         mEncodedTextView  = (TextView)findViewById(R.id.activity_aes_encode_text_view);
         mDecoded = (TextView)findViewById(R.id.activity_aes_decode_text_view);
 
 
         setSupportActionBar(toolbar);
-
-        button.setOnClickListener(this);
     }
 
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.activity_aes_button:
-                encodeAndDecode();
-                break;
-        }
-    }
-
-    public void encodeAndDecode() {
-        hideKeyboard();
+    public void encodeAndDecodeAES(View view) {
+        Utils.hideKeyboard(this);
         String stringText = mEditText.getText().toString();
         mEditText.setText("");
         mInPutTextView.setText(stringText);
@@ -59,7 +48,7 @@ public class AESActivity extends AppCompatActivity implements View.OnClickListen
         mEncodedTextView.setText(Base64.encodeToString(encodedBytes, Base64.DEFAULT));
 
         byte[] decodedBytes = SymmetricAlgorithmAES.decryption(secretKeySpec, encodedBytes);
-        mDecoded.setText( new String(decodedBytes));
+        mDecoded.setText(new String(decodedBytes));
     }
 
     @Override
@@ -75,15 +64,6 @@ public class AESActivity extends AppCompatActivity implements View.OnClickListen
     {
         finish();
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
-    }
-
-    public void hideKeyboard() {
-        // Check if no view has focus:
-        View view = this.getCurrentFocus();
-        if (view != null) {
-            InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
-            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
-        }
     }
 
 }

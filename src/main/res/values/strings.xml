@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">EncryptionFile</string>
     <string name="action_aes">AES</string>
+    <string name="action_rsa">RSA</string>
     <string name="activity_main_cryptographic_algorithms_title">Click email button for knowing which your device inventory of all the supported cryptographic algorithms.</string>
     <string name="activity_main_cryptographic_algorithms">your device inventory of all the supported cryptographic algorithms.</string>
     <string name="activity_main_encryption_finish">Encryption finish</string>
@@ -12,7 +13,10 @@
     <string name="symmetric_algorithm_aes_decryption_title">AES decryption: </string>
     <string name="symmetric_algorithm_aes_decryption">AES decryption error</string>
     <string name="asymmetric_algorithm_rsa_key">RSA key pair error</string>
+    <string name="asymmetric_algorithm_rsa_title">RSA Text</string>
+    <string name="asymmetric_algorithm_rsa_enryption_title">RSA encryption: </string>
     <string name="asymmetric_algorithm_rsa_enryption_error">RSA encryption error</string>
+    <string name="asymmetric_algorithm_rsa_deryption_title">RSA decryption: </string>
     <string name="asymmetric_algorithm_rsa_deryption_error">RSA decryption error</string>
     <string name="title_activity_aes">AESActivity</string>
     <string name="title_activity_rsa">RSAActivity</string>

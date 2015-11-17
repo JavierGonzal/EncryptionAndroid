@@ -67,16 +67,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public boolean onOptionsItemSelected(MenuItem item)
     {
+        boolean returnBoolean = false;
         //check selected menu item
-        if(item.getItemId() == R.id.action_aes)
-        {
-            Intent intent = new Intent(this, AESActivity.class);
-            startActivity(intent);
-            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
-            //close the Activity
-            return true;
+        switch (item.getItemId()) {
+
+            case R.id.action_aes:
+                Intent intent = new Intent(this, AESActivity.class);
+                startActivity(intent);
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+                //close the Activity
+                returnBoolean = true;
+                break;
+
+            case R.id.action_rsa:
+                Intent intentActionRSA = new Intent(this, RSAActivity.class);
+                startActivity(intentActionRSA);
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+                //close the Activity
+                returnBoolean =  true;
+                break;
         }
-        return false;
+        return returnBoolean;
     }
 
 }
