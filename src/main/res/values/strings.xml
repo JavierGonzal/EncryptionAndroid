@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">EncryptionFile</string>
+    <string name="action_aes">AES</string>
+    <string name="activity_main_cryptographic_algorithms">your device inventory of all the supported cryptographic algorithms.</string>
+    <string name="activity_main_encryption_finish">Encryption finish</string>
+    <string name="symmetric_algorithm_aes_secret_key_error">AES secret key spec error</string>
+    <string name="symmetric_algorithm_aes_encryption_title">AES encryption: </string>
+    <string name="symmetric_algorithm_aes_encryption">AES encryption error</string>
+    <string name="symmetric_algorithm_aes_decryption_title">AES decryption: </string>
+    <string name="symmetric_algorithm_aes_decryption">AES decryption error</string>
+    <string name="title_activity_aes">AESActivity</string>
+    <string name="title_activity_settings">Settings</string>
+
+</resources>
