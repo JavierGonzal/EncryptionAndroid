@@ -22,6 +22,10 @@
             android:name=".AESActivity"
             android:label="@string/title_activity_aes"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".RSAActivity"
+            android:label="@string/title_activity_rsa"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

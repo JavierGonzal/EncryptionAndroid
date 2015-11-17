@@ -17,8 +17,11 @@ public class SymmetricAlgorithmAES {
 
     public static final String sTAG = "SymmetricAlgorithmAES";
 
+    /**
+     * Seted up secret key spec for 128-bit AES encryption and decryption
+     * @return
+     */
     public static SecretKeySpec setUpSecrectKey() {
-        // Set up secret key spec for 128-bit AES encryption and decryption
         SecretKeySpec secretKeySpec = null;
         try {
             SecureRandom sr = SecureRandom.getInstance("SHA1PRNG");
@@ -32,8 +35,13 @@ public class SymmetricAlgorithmAES {
         return secretKeySpec;
     }
 
+    /**
+     * Encoded the original data with AES
+     * @param secretKeySpec
+     * @param theTestText
+     * @return
+     */
     public static byte[] encryption(SecretKeySpec secretKeySpec, String  theTestText) {
-        // Encode the original data with AES
         byte[] encodedBytes = null;
         try {
             Cipher c = Cipher.getInstance("AES");
@@ -46,8 +54,13 @@ public class SymmetricAlgorithmAES {
         return encodedBytes;
     }
 
+    /**
+     * Decoded the encoded data with AES
+     * @param secretKeySpec
+     * @param encodedBytes
+     * @return
+     */
     public static byte[] decryption(SecretKeySpec secretKeySpec, byte[]  encodedBytes) {
-        // Decode the encoded data with AES
         byte[] decodedBytes = null;
         try {
             Cipher c = Cipher.getInstance("AES");

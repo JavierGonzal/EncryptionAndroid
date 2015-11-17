@@ -11,6 +11,10 @@
     <string name="symmetric_algorithm_aes_encryption">AES encryption error</string>
     <string name="symmetric_algorithm_aes_decryption_title">AES decryption: </string>
     <string name="symmetric_algorithm_aes_decryption">AES decryption error</string>
+    <string name="asymmetric_algorithm_rsa_key">RSA key pair error</string>
+    <string name="asymmetric_algorithm_rsa_enryption_error">RSA encryption error</string>
+    <string name="asymmetric_algorithm_rsa_deryption_error">RSA decryption error</string>
     <string name="title_activity_aes">AESActivity</string>
+    <string name="title_activity_rsa">RSAActivity</string>
 
 </resources>
