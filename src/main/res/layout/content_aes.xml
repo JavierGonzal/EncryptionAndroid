@@ -24,20 +24,27 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/activity_aes_edit_text"
         android:layout_centerHorizontal="true" />
+    <TextView
+        android:id="@+id/activity_aes_text_view_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/symmetric_algorithm_aes_title"
+        android:textColor="@color/colorPrimary"
+        android:layout_below="@+id/activity_aes_button"/>
 
     <TextView
         android:id="@+id/activity_aes_text_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/activity_aes_button"
+        android:layout_below="@+id/activity_aes_text_view_title"
         android:layout_centerHorizontal="true" />
     <TextView
         android:id="@+id/activity_aes_encode_text_view_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/symmetric_algorithm_aes_encryption_title"
-        android:layout_below="@+id/activity_aes_text_view"
-        android:layout_centerHorizontal="true" />
+        android:textColor="@color/colorPrimary"
+        android:layout_below="@+id/activity_aes_text_view"/>
 
     <TextView
         android:id="@+id/activity_aes_encode_text_view"
@@ -51,8 +58,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/symmetric_algorithm_aes_decryption_title"
-        android:layout_below="@+id/activity_aes_encode_text_view"
-        android:layout_centerHorizontal="true" />
+        android:textColor="@color/colorPrimary"
+        android:layout_below="@+id/activity_aes_encode_text_view"/>
 
     <TextView
         android:id="@+id/activity_aes_decode_text_view"
